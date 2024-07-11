@@ -1,0 +1,684 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Legal Solutions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/Favicon.png' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Start -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 bg-secondary d-none d-lg-block">
+                <a href="{% url 'home' %}"
+                    class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <img src="{% static './svg/Logo.svg' %}" alt="">
+                </a>
+            </div>
+            <div class="col-lg-8">
+                <div class="row bg-white border-bottom d-none d-lg-flex">
+                    <div class="col-lg-7 text-left">
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-3">
+                            <i class="fa fa-envelope text-primary mr-2"></i>
+                            <small>info@legalsolutions.com</small>
+                        </div>
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                            <i class="fa fa-phone-alt text-primary mr-2"></i>
+                            <small>+58 251-551-4512</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-right">
+                        <div class="d-inline-flex align-items-center p-2">
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="tabla navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a style="width: 60vmin;" href="{% url 'home' %}" class="navbar-brand d-block d-lg-none"
+                        style="margin-left: 1rem;">
+                        <img src="{% static './svg/Logo.svg' %}" alt="">
+                    </a>
+                    <button style="margin-right: 1rem; background: #fff;" type="button" class="navbar-toggler"
+                        data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0" style="text-align: center;">
+                            <a style="padding: 1rem; border-bottom: 1px solid #B49C73;" href="{% url 'home' %}"
+                                class="nav-item nav-link active">Inicio</a>
+                            <a style="padding: 1rem; border-bottom: 1px solid #B49C73;" href="{% url 'about' %}"
+                                class="nav-item nav-link">Sobre Nosotros</a>
+                            <a style="padding: 1rem; border-bottom: 1px solid #B49C73;" href="{% url 'service' %}"
+                                class="nav-item nav-link">Servicios</a>
+                            <a style="padding: 1rem; border-bottom: 1px solid #B49C73;" href="{% url 'contact' %}"
+                                class="nav-item nav-link">Contáctanos</a>
+                            <a style="padding: 1rem; border-bottom: 1px solid #B49C73;"
+                                href="{% url 'login_administrador' %}" class="nav-item nav-link">Administrador</a>
+                        </div>
+                        <!-- <a href="team.html" class="btn btn-primary mr-3 d-none d-lg-block">Obtener Una Cita</a> -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 pb-5">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="{% static 'img/carousel-1.jpg'%}"
+                        style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h3 class="display-2 text-capitalize text-white mb-5" style="font-size: 5vmax;">Bienvenidos
+                                a nuestro Despacho
+                                Jurídico Digital</h3>
+                            <p class="text-white text-uppercase mb-4"
+                                style="letter-spacing: 1px; font-size: 0.8rem; font-weight: 600; opacity: 0.8;">
+                                Aunque trabajamos
+                                de
+                                manera tradicional, nos enorgullece utilizar la tecnología para hacer que nuestros
+                                servicios sean
+                                más accesibles y eficientes para usted. A través de nuestra página web, usted puede
+                                conocer más sobre nosotros, los
+                                servicios que ofrecemos, e incluso programar una cita. Cada uno de nuestros
+                                servicios es manejado por un
+                                especialista profesional, garantizando que reciba la mejor asesoría posible.</p>
+                            <a class="btn btn-primary py-3 px-5 mt-2" href="{% url 'team' %}">Obtener Una Cita</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="{% static 'img/carousel-2.jpg'%}"
+                        style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px; font-size: 2vmax">
+                                RESULTADOS QUE
+                                TE
+                                MERECES
+                            </h4>
+                            <h3 style="font-size: 5vmax" class="display-2 text-capitalize text-white mb-4">Nos
+                                preparamos para oponernos por
+                                tí
+                            </h3>
+                            <a class="btn btn-primary py-3 px-5 mt-2" href="{% url 'about' %}">Llámenos
+                                Ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-lg btn-secondary btn-lg-square">
+                    <span class="carousel-control-prev-icon"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                <div class="btn btn-lg btn-secondary btn-lg-square">
+                    <span class="carousel-control-next-icon"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <section class="container">
+        <!-- About Start -->
+        <div class="container-fluid py-4">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <img class="img-fluid rounded" src="{% static 'img/about.jpg'%}" alt="">
+                    </div>
+                    <div class="col-lg-6 mt-5 mt-lg-0">
+                        <h6 class="text-uppercase" style="margin: 0 0 16px 16px; font-size: 3vmin; opacity: 0.5;">
+                            CONOZCA MÁS SOBRE
+                            NOSOTROS</h6>
+                        <h1 class="mb-4" style="margin: 0 16px;">Brindamos servicios legales confiables y
+                            efectivos
+                        </h1>
+                        <p style="margin: 0 16px; ">Somos un Escritorio Jurídico “Legal Solutions”
+                            fundado en 2010 por
+                            un grupo de colegas abogados graduados en 2005 y
+                            especializados en diferentes áreas de este, que decidieron asociarse para crear un espacio
+                            dedicado a ayudar. Desde
+                            entonces hemos estado comprometidos con la excelencia en la prestación de servicios legales
+                            a nuestros clientes
+                            brindando soluciones efectivas y personalizadas a sus necesidades. Nuestro enfoque ha sido
+                            siempre mantener altos
+                            estándares de profesionalismo y ética, lo que nos ha permitido ganar la confianza y lealtad
+                            de una amplia base de
+                            clientes.</p>
+                        <a href="{% url 'about' %}" style="margin-left: 16px;" class="btn btn-primary mt-2">Leér
+                            Más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Services Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-10" style="text-align: center; margin: 0 16px">
+                        <h6 class="text-uppercase" style="font-size: 3vmin; opacity: 0.5;">Nuestro Servicios</h6>
+                        <h1 class="mb-4">Servicios de Legal Solutions</h1>
+                        <p>Nuestro equipo de abogados especializados está comprometido a proporcionar soluciones
+                            jurídicas de alta calidad en
+                            diversas áreas del derecho.</p>
+                        <a href="{% url 'service' %}" class="btn btn-primary mt-2">Más Servicios</a>
+                    </div>
+                    <div class="col-lg-12 pt-5 pt-lg-5">
+                        <div class="bg-primary rounded" style="height: 200px;"></div>
+                        <div class="owl-carousel service-carousel position-relative"
+                            style="margin-top: -100px; padding: 0 30px;">
+                            <div style="border: 1px solid #B49C73; padding: 1rem;"
+                                class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                                <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                    <i class="fa fa-2x fa-hand-holding-usd"></i>
+                                </div>
+                                <h5 class="mb-4 px-4">Abogado Mercantilista</h5>
+                                <p class="m-0 prf_card_service" style=" opacity: 0.6;">Asesora y representa a las
+                                    compañías en asuntos
+                                    altamente complejos,
+                                    garantizando así el cumplimiento de las normativas
+                                    y la resolución de conflictos empresariales.</p>
+                            </div>
+                            <div style="border: 1px solid #B49C73; padding: 1rem;"
+                                class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                                <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                    <i class="fa fa-2x fa-users"></i>
+                                </div>
+                                <h5 class="mb-4 px-4">Abogado Civil</h5>
+                                <p class="m-0">Se dedica a resolver disputas y ofrecer asesoría en asuntos relacionados
+                                    con contratos, propiedades, herencias y más.</p>
+                            </div>
+                            <div style="border: 1px solid #B49C73; padding: 1rem;"
+                                class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                                <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                    <i class="fa fa-2x fa-hand-holding-usd"></i>
+                                </div>
+                                <h5 class="mb-4 px-2">Abogado en derechos humanos</h5>
+                                <p class="m-0">Abogado en derechos humanos: El especialista en Derechos Humanos es un
+                                    profesional conocedor de las legislaciones y
+                                    mecanismos específicos para ofrecer defensa en caso de una posible vulneración de
+                                    los derechos humanos.</p>
+                            </div>
+                            <div style="border: 1px solid #B49C73; padding: 1rem;"
+                                class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                                <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                    <i class="fa fa-2x fa-users"></i>
+                                </div>
+                                <h5 class="mb-4 px-4">Abogado familiar</h5>
+                                <p class="m-0">Es el encargado de representar a los familiares en procedimientos
+                                    judiciales, hacer negociaciones en su nombre o
+                                    redactar documentos legales importantes relativos a acuerdos prenupciales o de
+                                    propiedad, adopción o paternidad, entre
+                                    otros.</p>
+                            </div>
+                            <div style="border: 1px solid #B49C73; padding: 1rem;"
+                                class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                                <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                    <i class="fa fa-2x fa-gavel"></i>
+                                </div>
+                                <h5 class="mb-4 px-4">Abogado Laboral</h5>
+                                <p class="m-0">Se encarga de otorgar estrategias que regulen el cumplimiento de los
+                                    derechos de los trabajadores y las obligaciones
+                                    tanto del trabajador como del empleador. Se puede acordar una mediación o un juicio.
+                                    En ambos casos lo que se busca es
+                                    conciliar una resolución para finalizar el conflicto entre las partes.</p>
+                            </div>
+                            <div style="border: 1px solid #B49C73; padding: 1rem;"
+                                class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                                <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                    <i class="fa fa-2x fa-gavel"></i>
+                                </div>
+                                <h5 class="mb-4 px-4">Abogados de Sucesiones</h5>
+                                <p class="m-0">Se encargará de administrar la sucesión, distribuir los activos y cumplir
+                                    con las disposiciones testamentarias. En caso
+                                    de un proceso por Notaría, el encargado de presentar la liquidación de la sucesión
+                                    es el Abogado en Sucesiones.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services End -->
+
+
+        <!-- Features Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-6" style="min-height: 500px;">
+                        <div class="position-relative h-100 rounded overflow-hidden">
+                            <img class="position-absolute w-100 h-100" src="{% static 'img/feature.jpg'%}"
+                                style="object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt-5 pb-lg-5">
+                        <div class="feature-text bg-white rounded p-lg-4">
+                            <h6 style="font-size: 2.5vmin; opacity: 0.5; margin: 0 1rem;" class="text-uppercase">“PASOS
+                                PARA CONSEGUIR UN
+                                ABOGADO EN EL ESCRITORIO JURIDICO”</h6>
+                            <h1 style="margin: 1rem;" class="mb-4">LEGAL SOLUTIONS</h1>
+                            <div class="d-flex mb-4" style="margin: 1rem;">
+                                <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
+                                    <h5 class="text-secondary m-0">01</h5>
+                                </div>
+                                <div class="ml-4">
+                                    <h5>Programar la primera cita</h5>
+                                    <p class="m-0">Una vez has elegido nuestro escritorio jurídico, contacta para
+                                        programar una primera reunión. En esta cita inicial
+                                        podrás exponer tu caso con más detalle.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4" style="margin: 1rem;">
+                                <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
+                                    <h5 class="text-secondary m-0">02</h5>
+                                </div>
+                                <div class="ml-4">
+                                    <h5>Preparar la información y documentos</h5>
+                                    <p class="m-0">Reúne toda la documentación relevante relacionada con tu caso, como
+                                        contratos, facturas, correspondencia, etc. Esto
+                                        ayudará al abogado a evaluar tu situación.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4" style="margin: 1rem;">
+                                <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
+                                    <h5 class="text-secondary m-0">03</h5>
+                                </div>
+                                <div class="ml-4">
+                                    <h5>Explicar con claridad los hechos</h5>
+                                    <p class="m-0">Durante la reunión, explica con detenimiento y precisión los hechos y
+                                        circunstancias de tu caso. ¡No omitas ningún
+                                        detalle que pueda ser importante!</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4" style="margin: 1rem;">
+                                <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
+                                    <h5 class="text-secondary m-0">04</h5>
+                                </div>
+                                <div class="ml-4">
+                                    <h5>Solicitar recomendaciones y estrategia</h5>
+                                    <p class="m-0">Pide al abogado que te proponga una estrategia legal y que te indique
+                                        los próximos pasos a seguir. Asegúrate de entender
+                                        bien sus recomendaciones.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4" style="margin: 1rem;">
+                                <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
+                                    <h5 class="text-secondary m-0">05</h5>
+                                </div>
+                                <div class="ml-4">
+                                    <h5>Acordar honorarios y forma de pago</h5>
+                                    <p class="m-0">Negocia y acuerda con el abogado los honorarios por sus servicios,
+                                        así como la forma y plazos de pago. Solicita que esto
+                                        quede por escrito.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4" style="margin: 1rem;">
+                                <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
+                                    <h5 class="text-secondary m-0">06</h5>
+                                </div>
+                                <div class="ml-4">
+                                    <h5>Mantener comunicación constante</h5>
+                                    <p class="m-0">A lo largo del proceso, mantén comunicación regular con tu abogado
+                                        para mantenerte informado sobre los avances y
+                                        cualquier novedad.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4" style="margin: 1rem;">
+                                <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
+                                    <h5 class="text-secondary m-0">07</h5>
+                                </div>
+                                <div class="ml-4">
+                                    <h5>Seguir las indicaciones del abogado</h5>
+                                    <p class="m-0">Es crucial que sigas puntualmente las instrucciones y recomendaciones
+                                        que te brinde el letrado para asegurar el éxito de
+                                        tu caso.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4" style="margin: 1rem;">
+                                <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
+                                    <h5 class="text-secondary m-0">08</h5>
+                                </div>
+                                <div class="ml-4" style="margin: 1rem;">
+                                    <h5>Estar atento a resultados</h5>
+                                    <p class="m-0">Revisa cuidadosamente cualquier documento o factura relacionada con
+                                        tu caso.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Features End -->
+
+
+        <!-- Action Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="bg-action rounded" style="height: 500px;">
+                    <div class="row h-100 align-items-center justify-content-center">
+                        <div class="col-lg-7 text-center">
+                            <h1 style=" margin: 0 1rem;" class="text-white mb-4">¿Quieres una consulta ahora?</h1>
+                            <a class="btn btn-primary py-3 px-5 mt-2" href="{% url 'contact' %}">Llámanos Ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Action End -->
+
+
+        <!-- Team Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="text-center pb-2">
+                    <h1 class="mb-4">Conozca a Nuestros Abogados</h1>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="bg-primary rounded" style="height: 200px;"></div>
+                        <div class="owl-carousel team-carousel position-relative"
+                            style="margin-top: -97px; padding: 0 30px;">
+                            <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
+                                <h5 class="mb-2 px-2">José Durán</h5>
+                                <p class="mb-3 px-4">Abogado Penal</p>
+                                <div class="team-img position-relative">
+                                    <img class="img-fluid" src="{% static 'img/team-1.jpg'%}" alt="">
+                                    <div class="team-social">
+                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
+                                <h5 class="mb-2 px-2">Cristhoper Nolan</h5>
+                                <p class="mb-3 px-4">Abogado Familia</p>
+                                <div class="team-img position-relative">
+                                    <img class="img-fluid" src="{% static 'img/team-2.jpg'%}" alt="">
+                                    <div class="team-social">
+                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
+                                <h5 class="mb-2 px-2">Luisa Kempes</h5>
+                                <p class="mb-3 px-4">Abogada Civil</p>
+                                <div class="team-img position-relative">
+                                    <img class="img-fluid" src="{% static 'img/team-3.jpg'%}" alt="">
+                                    <div class="team-social">
+                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
+                                <h5 class="mb-2 px-2">Pedro García</h5>
+                                <p class="mb-3 px-4">Abogado Mercantilista</p>
+                                <div class="team-img position-relative">
+                                    <img class="img-fluid" src="{% static 'img/team-4.jpg'%}" alt="">
+                                    <div class="team-social">
+                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
+                                <h5 class="mb-2 px-2">Leonel Andres</h5>
+                                <p class="mb-3 px-2">Abogados de Sucesiones</p>
+                                <div class="team-img position-relative">
+                                    <img class="img-fluid" src="{% static 'img/team-5.jpg'%}" alt="">
+                                    <div class="team-social">
+                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+
+        <!-- Testimonial Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="text-center pb-5">
+                    <h6 style="opacity: 0.5;" class="text-uppercase">Testimonios</h6>
+                    <h1 class="mb-5">Lo que dicen nuestros clientes</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item">
+                        <div class="testimonial-text position-relative bg-secondary text-light rounded p-4 mb-4">
+                            “Estoy muy agradecido con Legal Solutions. Su equipo de abogados es altamente profesional y
+                            siempre estuvo disponible
+                            para responder a mis preguntas. ¡Definitivamente los recomendaría a cualquiera que necesite
+                            asesoramiento legal de
+                            calidad!” 
+                        </div>
+                        <div style="padding: 0 1rem;" class="d-flex align-items-center pt-3">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/testimonial-1.jpg'%}"
+                                style="width: 80px; height: 80px;" alt="">
+                            <div class="pl-4">
+                                <h5>Carlos Rodríguez</h5>
+                                <!-- <p class="m-0">Profession</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-text position-relative bg-secondary text-light rounded p-4 mb-4">
+                            “Legal Solutions me ayudó con mi caso de lesiones personales. Desde el principio, me
+                            trataron con respeto y empatía.
+                            Trabajaron diligentemente en mi caso y lograron un resultado que superó mis expectativas.
+                            ¡Estoy muy agradecido por su
+                            ayuda!” 
+                        </div>
+                        <div style="padding: 0 1rem;" class="d-flex align-items-center pt-3">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/testimonial-2.jpg'%}"
+                                style="width: 80px; height: 80px;" alt="">
+                            <div class="pl-4">
+                                <h5>Carlos Pérez</h5>
+                                <!-- <p class="m-0">Profession</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-text position-relative bg-secondary text-light rounded p-4 mb-4">
+                            Me brindaron una asesoría legal completa y clara.
+                            Me sentí seguro y confiado en todo momento gracias a su experiencia y dedicación. Son un
+                            equipo excepcional.
+                        </div>
+                        <div style="padding: 0 1rem;" class="d-flex align-items-center pt-3">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/testimonial-3.jpg'%}"
+                                style="width: 80px; height: 80px;" alt="">
+                            <div class="pl-4">
+                                <h5>Luis Fonseca</h5>
+                                <!-- <p class="m-0">Profession</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-text position-relative bg-secondary text-light rounded p-4 mb-4">
+                            Su equipo de abogados es altamente calificado y comprometido con la satisfacción del
+                            cliente.
+                            Te guiarán en cada paso del proceso legal y te brindarán la mejor representación posible.
+                        </div>
+                        <div style="padding: 0 1rem;" class="d-flex align-items-center pt-3">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/testimonial-4.jpg'%}"
+                                style="width: 80px; height: 80px;" alt="">
+                            <div class="pl-4">
+                                <h5>Raúl Gonzáles</h5>
+                                <!-- <p class="m-0">Profession</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+        <div class="row mt-5" style="display: flex; align-items: center; ">
+            <div class="col-lg-5">
+                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                    <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
+                    <div class="ml-3">
+                        <h5 class="text-white">Nuestras oficinas</h5>
+                        <p class="m-0" style="font-size: 14px;">Torre Ejecutiva, 3001, Calle 26 entre Carreras 16 y 17.
+                            Barquisimeto, estado
+                            Lara. Venezuela.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                    <i class="fa fa-2x fa-envelope-open text-primary"></i>
+                    <div class="ml-3">
+                        <h5 class="text-white">Correo electrónico</h5>
+                        <p class="m-0">info@legalsolutions.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                    <i class="fa fa-2x fa-phone-alt text-primary"></i>
+                    <div class="ml-3">
+                        <h5 class="text-white">Teléfono</h5>
+                        <p class="m-0">+58 251-551-4512.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5" style="display: flex; align-items: center; justify-content: space-evenly;">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a style="padding: 0 1rem;" href="{% url 'home' %}" class="navbar-brand">
+                    <img style="width: 300px;" src="{% static './svg/Logo.svg'%}" alt="">
+                </a>
+            </div>
+            <div style="text-align: center;" class="col-lg-2 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Sobre Nosotros</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
+                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start mt-4">
+                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <p style="text-align: center; color: #B49C73;" class="m-0 text-white">&copy; Legal Solutions | Todos
+                        los
+                        derechos
+                        reservados</p>
+                </div>
+            </div>
+
+            <!-- Footer End -->
+
+
+            <!-- Back to Top -->
+            <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+            <!-- JavaScript Libraries -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+            <script src="{% static 'lib/easing/easing.min.js'%}"></script>
+            <script src="{% static 'lib/waypoints/waypoints.min.js'%}"></script>
+            <script src="{% static 'lib/owlcarousel/owl.carousel.min.js'%}"></script>
+            <script src="{% static 'lib/tempusdominus/js/moment.min.js'%}"></script>
+            <script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js'%}"></script>
+            <script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js'%}"></script>
+
+            <!-- Contact Javascript File -->
+            <script src="{% static 'mail/jqBootstrapValidation.min.js'%}"></script>
+            <!-- <script src="mail/contact.js"></script> -->
+
+            <!-- Template Javascript -->
+            <script src="{% static 'js/main.js'%}"></script>
+</body>
+
+</html>

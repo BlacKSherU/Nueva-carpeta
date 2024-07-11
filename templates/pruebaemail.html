@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        {% csrf_token %}
+        <input id="titulo" type="text">
+        <input id="correo" type="text">
+        <input id="contenido" type="text">
+
+
+        <button id="enviar" type="button">hola</button>
+
+    </form>
+</body>
+
+<div id="ajax-response"></div>
+<script src="{% static 'Administrador\js\jquery-3.4.1.min.js' %}"></script>
+<script>
+    $(document).ready(function () {
+        $('#enviar').click(function () {
+            var titulo = document.getElementById("titulo").value
+            var correo = document.getElementById("correo").value
+            var contenido = document.getElementById("contenido").value
+            var token =
+                $.ajax({
+                    url: '{% url "emailapi" %}',
+                    type: "POST",
+                    data: {
+                        titulo: titulo,
+                        correo: correo,
+                        contenido: contenido,
+                        csrfmiddlewaretoken: "{{ csrf_token }}",
+                    },
+                    success: function (data) {
+                        $('#ajax-response').text(data.xd);
+                    }
+                });
+        });
+    });
+</script>
+
+</html>

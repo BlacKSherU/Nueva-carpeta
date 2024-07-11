@@ -1,0 +1,36 @@
+.container-fluid .row .navbar-brand {
+    width: 80vmin;
+    width: 30vmax;
+    /* border-right: 1px solid #fff; */
+
+}
+
+.container-fluid .row a img{
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.p-4 {
+    padding: 0;
+}
+
+.prf_card_service {
+    font-size: 16px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+

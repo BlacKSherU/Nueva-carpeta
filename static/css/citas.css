@@ -1,0 +1,15 @@
+.error-message {
+    color: #CDBFA5;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.success-message {
+    color: #CDBFA5;
+}
+
+.error-message,
+.success-message {
+    font-weight: 400;
+}
